@@ -21,10 +21,15 @@ class Employee:
     def apply_raise(self):
         self.pay = int(self.pay*Employee.raise_amt)
 
+    # Class Method - here we receive class as the first argument instead of the instance
 
-# This is an instance of class and we can create multiple instance of class
+    @classmethod
+    def set_raise_amt(cls, amt):
+        cls.raise_amt = amt
 
-# This way is much more simpler and clearer to declare varibles
+
+        # This is an instance of class and we can create multiple instance of class
+        # This way is much more simpler and clearer to declare varibles
 emp1 = Employee("Corey", "Schafer", 50000)
 
 emp2 = Employee("Test", "User", 45000)
@@ -43,6 +48,12 @@ emp2 = Employee("Test", "User", 45000)
 
 
 # CLASS VARIABLES - That are shared amoung all instance of class, they are same for all instance
+
+print(Employee.num_of_emps)
+# This automatically takes Employee Class as the first argument and 1.05 is the second argument
+Employee.set_raise_amt(1.05)
+print(Employee.raise_amt)
+print(emp1.raise_amt)
 print(emp1.pay)
 emp1.apply_raise()
 print(emp1.pay)
