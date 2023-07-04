@@ -28,7 +28,7 @@ class Employee:
 
     # normal methods pass instance of class or self as the first argument
 
-    # @classmethod - pass class the first argument , cls - Class of Object
+    # @classmethod - pass class the first argument , cls - Class of Object , can be used as alternative constructor
 
     # Static Method - Donot pass any method automatically, behave just like regular function
 
